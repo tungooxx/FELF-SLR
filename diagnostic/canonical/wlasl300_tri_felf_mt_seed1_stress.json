@@ -1,0 +1,251 @@
+{
+  "dataset": "wlasl300",
+  "seed": 1,
+  "alpha": 0.5,
+  "beta": 1.0,
+  "gamma": 0.5,
+  "head": "fused",
+  "csv": "diagnostic\\wlasl300_tri_felf_mt_seed1_stress.csv",
+  "rows": [
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "normal",
+      "model": "B6",
+      "top1": 72.41379310344827,
+      "top5": 89.84674329501915,
+      "top1_drop": 0.0,
+      "top5_drop": 0.0
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "normal",
+      "model": "FELF",
+      "top1": 77.20306513409962,
+      "top5": 90.80459770114942,
+      "top1_drop": 0.0,
+      "top5_drop": 0.0
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "normal",
+      "model": "Tri_FELF_MT_a0.5_b1.0_g0.5_fused",
+      "top1": 77.96934865900383,
+      "top5": 92.33716475095785,
+      "top1_drop": 0.0,
+      "top5_drop": 0.0
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "center_repeat",
+      "model": "B6",
+      "top1": 34.67432950191571,
+      "top5": 58.42911877394636,
+      "top1_drop": -37.73946360153256,
+      "top5_drop": -31.417624521072796
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "center_repeat",
+      "model": "FELF",
+      "top1": 32.758620689655174,
+      "top5": 57.088122605363985,
+      "top1_drop": -44.44444444444444,
+      "top5_drop": -33.716475095785434
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "center_repeat",
+      "model": "Tri_FELF_MT_a0.5_b1.0_g0.5_fused",
+      "top1": 35.05747126436782,
+      "top5": 61.111111111111114,
+      "top1_drop": -42.91187739463601,
+      "top5_drop": -31.22605363984674
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "temporal_shuffle",
+      "model": "B6",
+      "top1": 60.53639846743295,
+      "top5": 85.63218390804597,
+      "top1_drop": -11.877394636015318,
+      "top5_drop": -4.214559386973178
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "temporal_shuffle",
+      "model": "FELF",
+      "top1": 62.06896551724138,
+      "top5": 84.67432950191571,
+      "top1_drop": -15.134099616858236,
+      "top5_drop": -6.130268199233711
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "temporal_shuffle",
+      "model": "Tri_FELF_MT_a0.5_b1.0_g0.5_fused",
+      "top1": 66.85823754789271,
+      "top5": 87.73946360153256,
+      "top1_drop": -11.111111111111114,
+      "top5_drop": -4.597701149425291
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "middle_third",
+      "model": "B6",
+      "top1": 62.26053639846744,
+      "top5": 83.14176245210729,
+      "top1_drop": -10.153256704980834,
+      "top5_drop": -6.704980842911866
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "middle_third",
+      "model": "FELF",
+      "top1": 63.984674329501914,
+      "top5": 84.09961685823755,
+      "top1_drop": -13.218390804597703,
+      "top5_drop": -6.704980842911866
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "middle_third",
+      "model": "Tri_FELF_MT_a0.5_b1.0_g0.5_fused",
+      "top1": 67.04980842911877,
+      "top5": 85.82375478927203,
+      "top1_drop": -10.919540229885058,
+      "top5_drop": -6.513409961685824
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "first_half",
+      "model": "B6",
+      "top1": 59.961685823754785,
+      "top5": 79.3103448275862,
+      "top1_drop": -12.452107279693486,
+      "top5_drop": -10.536398467432946
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "first_half",
+      "model": "FELF",
+      "top1": 61.68582375478927,
+      "top5": 80.26819923371647,
+      "top1_drop": -15.517241379310349,
+      "top5_drop": -10.536398467432946
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "first_half",
+      "model": "Tri_FELF_MT_a0.5_b1.0_g0.5_fused",
+      "top1": 62.26053639846744,
+      "top5": 83.52490421455938,
+      "top1_drop": -15.70881226053639,
+      "top5_drop": -8.812260536398469
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "second_half",
+      "model": "B6",
+      "top1": 45.40229885057471,
+      "top5": 69.92337164750958,
+      "top1_drop": -27.01149425287356,
+      "top5_drop": -19.92337164750957
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "second_half",
+      "model": "FELF",
+      "top1": 47.701149425287355,
+      "top5": 71.26436781609195,
+      "top1_drop": -29.501915708812263,
+      "top5_drop": -19.54022988505747
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "second_half",
+      "model": "Tri_FELF_MT_a0.5_b1.0_g0.5_fused",
+      "top1": 50.95785440613027,
+      "top5": 75.47892720306514,
+      "top1_drop": -27.01149425287356,
+      "top5_drop": -16.858237547892713
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "mask_global",
+      "model": "B6",
+      "top1": 15.517241379310345,
+      "top5": 36.59003831417625,
+      "top1_drop": -56.89655172413792,
+      "top5_drop": -53.256704980842905
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "mask_global",
+      "model": "FELF",
+      "top1": 3.8314176245210727,
+      "top5": 23.371647509578544,
+      "top1_drop": -73.37164750957855,
+      "top5_drop": -67.43295019157088
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "mask_global",
+      "model": "Tri_FELF_MT_a0.5_b1.0_g0.5_fused",
+      "top1": 29.88505747126437,
+      "top5": 66.66666666666667,
+      "top1_drop": -48.08429118773945,
+      "top5_drop": -25.670498084291182
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "frame_dropout",
+      "model": "B6",
+      "top1": 72.41379310344827,
+      "top5": 90.42145593869732,
+      "top1_drop": 0.0,
+      "top5_drop": 0.5747126436781684
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "frame_dropout",
+      "model": "FELF",
+      "top1": 76.24521072796935,
+      "top5": 90.42145593869732,
+      "top1_drop": -0.9578544061302665,
+      "top5_drop": -0.3831417624520981
+    },
+    {
+      "dataset": "wlasl300",
+      "seed": 1,
+      "test_name": "frame_dropout",
+      "model": "Tri_FELF_MT_a0.5_b1.0_g0.5_fused",
+      "top1": 77.39463601532567,
+      "top5": 91.7624521072797,
+      "top1_drop": -0.5747126436781542,
+      "top5_drop": -0.5747126436781542
+    }
+  ]
+}

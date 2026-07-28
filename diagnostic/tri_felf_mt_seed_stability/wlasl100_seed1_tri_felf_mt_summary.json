@@ -1,0 +1,47 @@
+{
+  "architecture": "Tri-FELF-MT",
+  "fusion_rule": "z = a*z_Baseline + b*z_FELF + c*z_MT",
+  "weights": {
+    "baseline": 0.5,
+    "felf": 1.0,
+    "mt": 0.5
+  },
+  "val_top1": 85.3125,
+  "val_top5": 95.9375,
+  "test_top1": 88.48167539267016,
+  "test_top5": 95.28795811518324,
+  "movement_vs_baseline": {
+    "reference_wrong_to_fused_correct": 5,
+    "reference_correct_to_fused_wrong": 1,
+    "net_corrections": 4,
+    "rank_2_to_1": 2,
+    "rank_3_to_1": 1,
+    "rank_4_or_5_to_1": 2,
+    "rank_gt5_to_1": 0,
+    "rank_improved": 14,
+    "rank_worsened": 7,
+    "rank_unchanged": 170
+  },
+  "movement_vs_felf": {
+    "reference_wrong_to_fused_correct": 5,
+    "reference_correct_to_fused_wrong": 1,
+    "net_corrections": 4,
+    "rank_2_to_1": 4,
+    "rank_3_to_1": 1,
+    "rank_4_or_5_to_1": 0,
+    "rank_gt5_to_1": 0,
+    "rank_improved": 15,
+    "rank_worsened": 6,
+    "rank_unchanged": 170
+  },
+  "inputs": {
+    "baseline_val": "D:\\newgeneration\\HS-Project\\rework_model\\cache\\wlasl100_old_B6\\frame_old\\wlasl100_seed1_B6\\val_logits.npy",
+    "baseline_test": "D:\\newgeneration\\HS-Project\\rework_model\\cache\\wlasl100_old_B6\\frame_old\\wlasl100_seed1_B6\\test_logits.npy",
+    "felf_val": "D:\\newgeneration\\HS-Project\\rework_model\\cache\\wlasl100_old_B6\\frame_old\\wlasl100_FELF_seed1_lrg10_rf075\\val_logits.npy",
+    "felf_test": "D:\\newgeneration\\HS-Project\\rework_model\\cache\\wlasl100_old_B6\\frame_old\\wlasl100_FELF_seed1_lrg10_rf075\\test_logits.npy",
+    "mt_val": "D:\\newgeneration\\HS-Project\\rework_model\\cache\\wlasl100_morphtraj_firstn\\morph_traj\\wlasl100_MorphTrajExpert_seed1\\val_logits_fused.npy",
+    "mt_test": "D:\\newgeneration\\HS-Project\\rework_model\\cache\\wlasl100_morphtraj_firstn\\morph_traj\\wlasl100_MorphTrajExpert_seed1\\test_logits_fused.npy",
+    "val_labels": "D:\\newgeneration\\HS-Project\\rework_model\\cache\\wlasl100_morphtraj_firstn\\morph_traj\\wlasl100_MorphTrajExpert_seed1\\val_labels.npy",
+    "test_labels": "D:\\newgeneration\\HS-Project\\rework_model\\cache\\wlasl100_morphtraj_firstn\\morph_traj\\wlasl100_MorphTrajExpert_seed1\\test_labels.npy"
+  }
+}

@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: "FELF-SLR: Factor-Expert Logit Fusion for Class-Crowded Isolated Sign Recognition"
+message: "If you use this code, please cite the accompanying paper."
+type: software
+authors:
+  - family-names: Do Minh
+    given-names: Tung
+  - family-names: Hoang Trung
+    given-names: Kien
+  - family-names: Hoang Trong
+    given-names: Hien
+  - family-names: Nguyen
+    given-names: Gia Nhu
+repository-code: "https://github.com/tungooxx/FELF-SLR"
+license: MIT
+date-released: 2026-07-28

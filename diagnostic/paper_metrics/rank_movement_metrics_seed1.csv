@@ -1,0 +1,7 @@
+wrong_to_correct,correct_to_wrong,net_corrections,corrected_already_in_reference_top5,corrected_total,rank_2_to_1,rank_3_to_1,rank_4_or_5_to_1,rank_gt5_to_1,rank_improved,rank_worsened,rank_unchanged,rank_1_to_wrong,reference_top5_candidate_retention_percent,overlap_at5_percent,true_class_drop_at5,true_class_drop_at5_percent,dataset,seed,reference,final
+6,6,0,6,6,3,1,2,0,16,14,161,6,60.10471204188481,60.10471204188481,3,1.5706806282722512,wlasl100,1,Baseline,FELF
+5,1,4,5,5,2,1,2,0,14,7,170,1,71.9371727748691,71.9371727748691,1,0.5235602094240838,wlasl100,1,Baseline,Tri-FELF-MT
+5,1,4,5,5,4,1,0,0,15,6,170,1,76.02094240837695,76.02094240837695,1,0.5235602094240838,wlasl100,1,FELF,Tri-FELF-MT
+40,15,25,37,40,27,4,6,3,82,53,387,15,61.80076628352491,61.80076628352491,16,3.065134099616858,wlasl300,1,Baseline,FELF
+37,8,29,33,37,23,4,6,4,87,31,404,8,72.03065134099617,72.03065134099617,6,1.1494252873563218,wlasl300,1,Baseline,Tri-FELF-MT
+12,8,4,12,12,8,2,2,0,61,22,439,8,79.61685823754789,79.61685823754789,2,0.38314176245210724,wlasl300,1,FELF,Tri-FELF-MT
