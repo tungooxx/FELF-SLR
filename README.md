@@ -116,6 +116,12 @@ WLASL videos and derived pose caches are not redistributed. Obtain WLASL from
 its official source and follow its Computational Use of Data Agreement. This
 repository contains only code and derived aggregate diagnostics.
 
+The `datasets/vsl_pilot_23/` directory contains a release candidate for the
+23-class self-recorded VSL pilot. It includes split-aligned derived pose
+features, labels, metadata, and checksums, but no source videos or images.
+Public publication of this directory is conditional on documented consent from
+the author-signer; see its `RELEASE_CHECKLIST.md`.
+
 ## Reproduction Scope
 
 External comparison rows in the paper are same-split reproductions: public

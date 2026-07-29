@@ -1,0 +1,119 @@
+{
+  "name": "VSL-Pilot-23 derived pose release candidate",
+  "classes": [
+    "Cam on",
+    "Cam Trai",
+    "Di Dao",
+    "Dia Chi",
+    "Hap dan",
+    "Kha Nang",
+    "Khong Dep",
+    "Khong quen",
+    "Ky nang",
+    "Le Halloween",
+    "May Man",
+    "Ngay nay",
+    "Nghi Hoc",
+    "Nhan Vien",
+    "Ruc Ro",
+    "San Truong",
+    "Thay",
+    "Thuong Xuyen",
+    "Tiep tan",
+    "Toi",
+    "Tu Choi",
+    "Xin chao",
+    "Xin loi"
+  ],
+  "num_classes": 23,
+  "split": {
+    "train": 414,
+    "val": 138,
+    "test": 138
+  },
+  "representation": {
+    "kind": "derived pose features",
+    "left_dim": 165,
+    "right_dim": 165,
+    "global_dim": 23,
+    "frames": 40,
+    "source_videos_included": false
+  },
+  "shapes": {
+    "train": {
+      "left": [
+        414,
+        40,
+        165
+      ],
+      "right": [
+        414,
+        40,
+        165
+      ],
+      "global": [
+        414,
+        40,
+        23
+      ],
+      "labels": [
+        414
+      ]
+    },
+    "val": {
+      "left": [
+        138,
+        40,
+        165
+      ],
+      "right": [
+        138,
+        40,
+        165
+      ],
+      "global": [
+        138,
+        40,
+        23
+      ],
+      "labels": [
+        138
+      ]
+    },
+    "test": {
+      "left": [
+        138,
+        40,
+        165
+      ],
+      "right": [
+        138,
+        40,
+        165
+      ],
+      "global": [
+        138,
+        40,
+        23
+      ],
+      "labels": [
+        138
+      ]
+    }
+  },
+  "artifacts": [
+    {
+      "path": "train.npz",
+      "sha256": "ce98402ee0b5ba3426397b8ee965be14a45fa00615e8091888a543026835ca14"
+    },
+    {
+      "path": "val.npz",
+      "sha256": "e21d2cc4b73fa6c968d9f9f5c69f6338ffded39471145e5fb2e368a575e75afd"
+    },
+    {
+      "path": "test.npz",
+      "sha256": "30f1916eb4a81f2705b86d8857c47b82a1d0f9eed431ae6e1ff87656b73580d4"
+    }
+  ],
+  "release_status": "candidate; obtain documented public-release consent before publication"
+}
