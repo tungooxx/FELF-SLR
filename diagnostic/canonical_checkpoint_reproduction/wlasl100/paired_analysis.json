@@ -1,0 +1,39 @@
+{
+  "protocol": {
+    "bootstrap_iterations": 20000,
+    "bootstrap_seed": 20260728,
+    "mcnemar": "exact two-sided"
+  },
+  "baseline_to_felf_slr": {
+    "top1_delta": 2.0942408376963373,
+    "top1_ci95": [
+      0.0,
+      4.712041884816753
+    ],
+    "top1_bootstrap_p": 0.12869356532173393,
+    "top1_mcnemar_p": 0.21875,
+    "reference_only_correct": 1,
+    "final_only_correct": 5,
+    "overlap_at5_percent": 72.46073298429319,
+    "true_class_drop_at5": 0,
+    "rank_improved": 14,
+    "rank_worsened": 5,
+    "rank_unchanged": 172
+  },
+  "felf_to_felf_slr": {
+    "top1_delta": 1.0471204188481686,
+    "top1_ci95": [
+      0.0,
+      2.617801047120427
+    ],
+    "top1_bootstrap_p": 0.26818659067046646,
+    "top1_mcnemar_p": 0.5,
+    "reference_only_correct": 0,
+    "final_only_correct": 2,
+    "overlap_at5_percent": 77.17277486910994,
+    "true_class_drop_at5": 0,
+    "rank_improved": 13,
+    "rank_worsened": 7,
+    "rank_unchanged": 171
+  }
+}

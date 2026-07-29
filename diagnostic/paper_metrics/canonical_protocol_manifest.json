@@ -18,6 +18,23 @@
       "val_labels": "D:\\newgeneration\\HS-Project\\rework_model\\cache\\wlasl100_morphtraj_firstn\\morph_traj\\wlasl100_MorphTrajExpert_seed1\\val_labels.npy",
       "test_labels": "D:\\newgeneration\\HS-Project\\rework_model\\cache\\wlasl100_morphtraj_firstn\\morph_traj\\wlasl100_MorphTrajExpert_seed1\\test_labels.npy"
     },
+    "source_metadata_samples": {
+      "train": 1442,
+      "val": 338,
+      "test": 258
+    },
+    "retained_samples": {
+      "train": 1396,
+      "val": 320,
+      "test": 191
+    },
+    "excluded_samples_combined_unavailable_or_pose_cache_failure": {
+      "train": 46,
+      "val": 18,
+      "test": 67
+    },
+    "test_classes_with_support": 96,
+    "source_metadata_sha256": "6f8510e2de97930e7bd46f1536aba9541fa13b60d6bdf48643413b1944b2eb80",
     "test_samples": 191,
     "val_samples": 320
   },
@@ -40,6 +57,23 @@
       "val_labels": "D:\\newgeneration\\HS-Project\\rework_model\\cache\\wlasl300_morphtraj_firstn\\morph_traj\\wlasl300_MorphTrajExpert_seed1\\val_labels.npy",
       "test_labels": "D:\\newgeneration\\HS-Project\\rework_model\\cache\\wlasl300_morphtraj_firstn\\morph_traj\\wlasl300_MorphTrajExpert_seed1\\test_labels.npy"
     },
+    "source_metadata_samples": {
+      "train": 3549,
+      "val": 900,
+      "test": 668
+    },
+    "retained_samples": {
+      "train": 3400,
+      "val": 826,
+      "test": 522
+    },
+    "excluded_samples_combined_unavailable_or_pose_cache_failure": {
+      "train": 149,
+      "val": 74,
+      "test": 146
+    },
+    "test_classes_with_support": 287,
+    "source_metadata_sha256": "6f8510e2de97930e7bd46f1536aba9541fa13b60d6bdf48643413b1944b2eb80",
     "test_samples": 522,
     "val_samples": 826
   }

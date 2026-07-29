@@ -12,5 +12,7 @@ rework_model/
 cache/
 data/
 videos/
-checkpoints/
-
+checkpoints/*
+!checkpoints/canonical/
+!checkpoints/canonical/*.pth
+!checkpoints/canonical/SHA256SUMS

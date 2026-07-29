@@ -1,0 +1,43 @@
+{
+  "protocol": "direct checkpoint inference",
+  "fusion": {
+    "baseline_weight": 0.5,
+    "felf_weight": 1.0,
+    "mt_weight": 0.5
+  },
+  "checkpoints": {
+    "baseline": "checkpoints/canonical/wlasl100_baseline.pth",
+    "felf": "checkpoints/canonical/wlasl100_felf.pth",
+    "mt": "checkpoints/canonical/wlasl100_mt.pth"
+  },
+  "metrics": {
+    "baseline": {
+      "samples": 191,
+      "per_instance_top1": 86.38743455497382,
+      "per_instance_top5": 94.24083769633508,
+      "per_class_top1": 86.37152777777777,
+      "per_class_top5": 94.27083333333334
+    },
+    "felf": {
+      "samples": 191,
+      "per_instance_top1": 87.43455497382199,
+      "per_instance_top5": 94.76439790575915,
+      "per_class_top1": 87.76041666666666,
+      "per_class_top5": 94.87847222222223
+    },
+    "mt": {
+      "samples": 191,
+      "per_instance_top1": 83.7696335078534,
+      "per_instance_top5": 93.717277486911,
+      "per_class_top1": 84.89583333333334,
+      "per_class_top5": 94.18402777777777
+    },
+    "felf_slr": {
+      "samples": 191,
+      "per_instance_top1": 88.48167539267016,
+      "per_instance_top5": 95.81151832460732,
+      "per_class_top1": 88.62847222222221,
+      "per_class_top5": 96.18055555555557
+    }
+  }
+}
