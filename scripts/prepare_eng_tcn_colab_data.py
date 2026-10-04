@@ -30,6 +30,7 @@ def main():
     ap.add_argument('--repo',type=Path,default=EXPECTED_ROOT)
     ap.add_argument('--dataset-dir',type=Path,required=True)
     ap.add_argument('--archive',default='eng_tcn_r1r2_wlasl100_dev_cache.zip')
+    ap.add_argument('--verify-only',action='store_true')
     a=ap.parse_args()
     repo=a.repo.resolve(); ds=a.dataset_dir.resolve()
     if repo != EXPECTED_ROOT:
@@ -45,29 +46,45 @@ def main():
     assert_sha(repo/'code/wlasl_geometry_utils.py',EXPECTED['wlasl_geometry_utils'],'wlasl_geometry_utils')
     vendor=repo/'vendor/eng_tcn_r1r2/factorial_dev.py'
     assert_sha(vendor,EXPECTED['factorial_dev'],'vendored factorial_dev')
-    FACTORIAL_ROOT.mkdir(parents=True,exist_ok=True)
-    shutil.copy2(vendor,FACTORIAL_ROOT/'factorial_dev.py')
-    assert_sha(FACTORIAL_ROOT/'factorial_dev.py',EXPECTED['factorial_dev'],'installed factorial_dev')
+    installed_factorial=FACTORIAL_ROOT/'factorial_dev.py'
+    if installed_factorial.exists():
+        assert_sha(installed_factorial,EXPECTED['factorial_dev'],'installed factorial_dev')
+    elif not a.verify_only:
+        FACTORIAL_ROOT.mkdir(parents=True,exist_ok=True)
+        shutil.copy2(vendor,installed_factorial)
+        assert_sha(installed_factorial,EXPECTED['factorial_dev'],'installed factorial_dev')
 
     archive=ds/a.archive
-    if not archive.exists(): raise SystemExit(f'missing archive: {archive}')
-    tmp=ds/'_eng_tcn_extract'
-    if tmp.exists(): shutil.rmtree(tmp)
-    tmp.mkdir()
-    with zipfile.ZipFile(archive) as z: z.extractall(tmp)
-    manifest=json.loads((tmp/'manifest.json').read_text())
+    tmp=None
+    expanded=ds/'eng_tcn_r1r2_wlasl100_dev_cache'
+    if archive.exists():
+        tmp=ds/'_eng_tcn_extract'
+        if tmp.exists(): shutil.rmtree(tmp)
+        tmp.mkdir()
+        with zipfile.ZipFile(archive) as z: z.extractall(tmp)
+        payload_root=tmp
+    elif (expanded/'manifest.json').exists():
+        payload_root=expanded
+    elif (ds/'manifest.json').exists() and (ds/'cache').exists():
+        payload_root=ds
+    else:
+        raise SystemExit(f'no supported ENG-TCN payload layout under {ds}')
+    manifest_path=payload_root/'manifest.json'
+    assert_sha(manifest_path,'39cecff34809a170e977663c5071ca42a1677c4cac3e654fb2c29c7a275dcf87','dataset manifest')
+    manifest=json.loads(manifest_path.read_text())
     if manifest.get('experiment_id')!='27e54160-30b8-440b-b517-2bffbeae897c': raise SystemExit('wrong experiment manifest')
     target=repo/CACHE_REL
-    target.mkdir(parents=True,exist_ok=True)
+    if not a.verify_only: target.mkdir(parents=True,exist_ok=True)
     for e in manifest['files']:
         rel=Path(e['relative_path'])
         if rel.name.startswith('test_') or 'wlasl300' in str(rel).lower(): raise SystemExit(f'forbidden file in bundle: {rel}')
-        src=tmp/rel
+        src=payload_root/rel
         assert_sha(src,e['sha256'],str(rel))
-        dst=target/rel.relative_to('cache')
-        dst.parent.mkdir(parents=True,exist_ok=True)
-        shutil.copy2(src,dst)
-        assert_sha(dst,e['sha256'],str(dst))
-    shutil.rmtree(tmp)
-    print(json.dumps({'status':'PASS','files':len(manifest['files']),'repo':str(repo),'cache':str(target),'test258_in_bundle':False,'wlasl300_in_bundle':False},sort_keys=True))
+        if not a.verify_only:
+            dst=target/rel.relative_to('cache')
+            dst.parent.mkdir(parents=True,exist_ok=True)
+            shutil.copy2(src,dst)
+            assert_sha(dst,e['sha256'],str(dst))
+    if tmp is not None: shutil.rmtree(tmp)
+    print(json.dumps({'status':'PASS','files':len(manifest['files']),'layout':str(payload_root),'verify_only':a.verify_only,'repo':str(repo),'cache':str(target),'test258_in_bundle':False,'wlasl300_in_bundle':False},sort_keys=True))
 if __name__=='__main__': main()
