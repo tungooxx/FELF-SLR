@@ -27,9 +27,13 @@ Configure your Kaggle API token in Colab **outside the repository**. Never commi
 bash scripts/download_eng_tcn_kaggle_data.sh /content/eng_tcn_r1r2_data /workspace/local-vlm/SLR/FELF-SLR
 ```
 
-Default dataset slug:
+Private dataset mirrors are tried automatically in this order:
 
-`chuckies/felf-slr-eng-tcn-r1r2-wlasl100-dev-cache`
+- `chuckies/felf-slr-eng-tcn-r1r2-wlasl100-dev-cache`
+- `lordchucky/felf-slr-eng-tcn-r1r2-wlasl100-dev-cache`
+- `tungdsxx/felf-slr-eng-tcn-r1r2-wlasl100-dev-cache`
+
+The Kaggle token in Colab must belong to one of those project profiles. You may override the slug with `ENG_TCN_KAGGLE_DATASET`.
 
 The preparation script verifies the archive manifest and source dependency SHA256 values, installs the exact vendored `factorial_dev.py` at the path frozen by the runner, and copies only the 14 development-cache files (train, validation, frozen train augmentation). **No `test_*` or WLASL-300 file is included.**
 
