@@ -16,7 +16,7 @@ cd FELF-SLR
 Use a CUDA PyTorch environment compatible with the project. Then:
 
 ```bash
-python -m pip install kaggle numpy
+python -m pip install -U kaggle numpy
 ```
 
 Configure your Kaggle API token in Colab **outside the repository**. Never commit credentials.
